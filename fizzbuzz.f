@@ -2,18 +2,16 @@
             implicit none
             
             integer :: counter
-            real :: realCounter
             logical :: fizz
             logical :: buzz
 
             do counter=1,100
-                realCounter = counter ! Very cool how it doesn't let us mod an integer and another integer 
-                if (mod(realCounter, 3.0) == 0) then
+                if (mod(REAL(counter), 3.0) == 0) then
                     fizz = .true.
                 else
                     fizz = .false.
                 end if
-                if (mod(realCounter, 5.0) == 0) then
+                if (mod(REAL(counter), 5.0) == 0) then
                     buzz = .true.
                 else
                     buzz = .false.
@@ -32,4 +30,4 @@
             end do
 
         end program fizzbuzz
-        
+      
